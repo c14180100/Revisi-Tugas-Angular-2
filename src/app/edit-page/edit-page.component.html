@@ -1,0 +1,7 @@
+<h1>Halaman Edit</h1>
+<p style="color:red;">*edit berdasarkan nama</p>
+<input type="text" [(ngModel)]="name" placeholder="Nama Jurusan">
+<br><br>
+<input type="text" [(ngModel)]="caption" placeholder="Penjelasan Jurusan">
+<br><br>
+<button (click)="edit(name,caption)">Submit</button>

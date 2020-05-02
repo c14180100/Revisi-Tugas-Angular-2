@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GlobSerService } from '../glob-ser.service';
 
 @Component({
   selector: 'app-edit-page',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditPageComponent implements OnInit {
 
-  constructor() { }
+  name:String;
+  caption:String;
+
+  constructor(private route : ActivatedRoute, public globalVar : GlobSerService) { 
+    
+
+  }
 
   ngOnInit() {
   }
+
+  edit(name, caption){
+
+    this.name = name;
+    this.caption = caption;
+    this.globalVar.editCaption(this.name,this.caption);
+
+  }
+
+
 
 }

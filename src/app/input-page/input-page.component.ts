@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GlobSerService } from '../glob-ser.service';
 
 @Component({
   selector: 'app-input-page',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputPageComponent implements OnInit {
 
-  constructor() { }
+  name:String;
+  caption:String;
+
+  constructor(private route : ActivatedRoute, public globalVar : GlobSerService) { 
+    
+
+  }
 
   ngOnInit() {
+  }
+
+  input(name, caption){
+
+    this.name = name;
+    this.caption = caption;
+    this.globalVar.setCaption(this.caption);
+    this.globalVar.setName(this.name);
+
   }
 
 }

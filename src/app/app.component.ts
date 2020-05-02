@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {GlobSerService} from './glob-ser.service';
+import { GlobSerService } from './glob-ser.service';
 
 @Component({
   selector: 'my-app',
@@ -9,4 +9,17 @@ import {GlobSerService} from './glob-ser.service';
 })
 export class AppComponent  {
   name = 'Angular';
+
+  constructor(private router:Router, public globalVar : GlobSerService){}
+    input(){
+      this.router.navigate(['input-page']);
+    }
+
+    list(){
+      this.router.navigate(['list-page']);
+    }
+
+    edit(){
+      this.router.navigate(['edit-page']);
+    }
 }
