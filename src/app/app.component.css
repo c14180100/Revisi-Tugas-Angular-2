@@ -1,3 +1,19 @@
 p {
   font-family: Lato;
 }
+
+button{
+  padding: 15px;
+  background-color: transparent;
+  border: 5px solid teal;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: teal;
+  font-weight: bolder;
+}
+
+button:hover{
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
