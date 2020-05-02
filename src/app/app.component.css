@@ -4,16 +4,16 @@ p {
 
 button{
   padding: 15px;
-  background-color: transparent;
+  background-color: teal;
   border: 5px solid teal;
   text-transform: uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: teal;
+  color: white;
   font-weight: bolder;
 }
 
 button:hover{
-  background-color: teal;
-  color: white;
+  background-color: transparent;
+  color: teal;
   cursor: pointer;
 }
